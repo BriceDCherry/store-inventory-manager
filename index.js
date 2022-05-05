@@ -50,3 +50,53 @@ function getCategory(itemName) {
         return "none"
     }
 }
+
+function sellIn() {
+    itemDisplayArray.forEach(object => {
+        const newInventoryItem = document.querySelector(".custom-inventory-item");
+        newInventoryItem.innerHTML = `
+        <td class="item-name">${object.itemName}</td>
+        <td class="item-sell-in">${(object.itemSellIn - 1)}</td>
+        <td>${object.itemQuality}</td>
+        `
+        console.log(itemDisplayArray)
+        object.itemSellIn--;
+        inventoryDisplayTable.append(newInventoryItem)
+    })
+}
+
+function specialQuality() {
+    itemDisplayArray.forEach(object => {
+        if (object.itemCategory === "aged") {
+            object.itemQuality = object.itemQuality + 3
+        } else if (object.itemCategory === "backstage") {
+            object.itemQuality = object.itemQuality + 1
+        } else if (object.itemCategory === "sulfuras") {
+            object.itemQuality = object.itemQuality
+        } else if (object.itemCategory === "conjured") {
+            object.itemQuality = object.itemQuality - 2
+        }
+    })
+}
+
+function sellOut() {
+    itemDisplayArray.forEach(object => {
+        if (object.itemSellIn <= 0 && object.itemCategory === "none") {
+            object.itemQuality = object.itemQuality - 2
+        } else {
+            object.itemQuality--
+        }
+    })
+}
+
+function limitQuality() {
+    itemDisplayArray.forEach(object => {
+        if (object.itemQuality >= 50) {
+            return object.itemQuality === 50
+        } else if (object.itemQuality <= 0) {
+            return object.itemQuality === 0
+        } else {
+            object.itemQuality = object.itemQuality
+        }
+    })
+}
