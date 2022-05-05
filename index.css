@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@500&display=swap');
 
 body {
     background-image: url(white-gray.webp);
@@ -17,13 +17,13 @@ div > img {
 h1, h2 {
     text-align: center;
     font-size: 50px;
-    font-family: 'Josefin Sans', sans-serif; 
+    font-family: 'Dancing Script', cursive;
     padding: 10px 0px 10px 0px;
 }
 
 form {
     text-align: center;
-    font-family: 'Josefin Sans', sans-serif;
+    font-family: 'Dancing Script', cursive;
     font-size: 25px;
     margin: 25px auto 10px auto ;
     width: 600px;
@@ -49,13 +49,13 @@ label {
     text-align: center;
     padding: 10px;
     border:10px solid #fcc204;
-    font-family: 'Josefin Sans', sans-serif;
+    font-family: 'Dancing Script', cursive;
 }
 
 button {
   margin-left: .5em;
   margin-top: 1em;
-  font-family: 'Josefin Sans', sans-serif;
+  font-family: 'Dancing Script', cursive;
   color: #000;
   background-color: #dfdedb;
   font-size: 25px;
