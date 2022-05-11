@@ -17,7 +17,7 @@ newItemForm.addEventListener("submit", (event) => {
         itemCategory: getCategory(formData.get("item-name"))
     }
     itemDisplayArray.push(itemInformation);
-    console.log(itemDisplayArray)
+
 
     const tableNewInventoryItem = document.createElement("tr");
     tableNewInventoryItem.innerHTML = `
@@ -59,7 +59,6 @@ function sellIn() {
         <td class="item-sell-in">${(object.itemSellIn - 1)}</td>
         <td>${object.itemQuality}</td>
         `
-        console.log(itemDisplayArray)
         object.itemSellIn--;
         inventoryDisplayTable.append(newInventoryItem)
     })
